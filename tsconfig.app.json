@@ -7,11 +7,10 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
-    "moduleResolution": "Bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
 
