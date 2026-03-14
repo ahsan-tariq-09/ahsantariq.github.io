@@ -1,7 +1,3 @@
-Here is an **updated README** including your **site link and language breakdown**. You can copy this directly into `README.md`.
-
----
-
 # Ahsan Tariq – Personal Website
 
 This repository contains the source code for my personal website and portfolio.
@@ -166,7 +162,3 @@ public
 # License
 
 This project is open source and available under the **MIT License**.
-
----
-
-If you'd like, I can also help you add **GitHub badges and a screenshot preview of your website at the top of the README** so it looks much more polished on your GitHub profile.
