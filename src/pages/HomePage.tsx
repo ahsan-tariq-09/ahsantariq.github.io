@@ -23,65 +23,11 @@ export default function HomePage() {
       </section>
 
       <section>
-        <h2>Languages & Tools</h2>
-        <div className="grid three">
-          {siteData.skills.map((skill) => (
-            <article className="card" key={skill.name}>
-              <h3>{skill.name}</h3>
-              <p>{skill.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2>What I’m Working On</h2>
-        <div className="card">
-          <ul className="clean-list">
-            {siteData.currentWork.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <h2>Current Goals</h2>
-        <div className="card">
-          <ul className="clean-list">
-            {siteData.goals.map((goal) => (
-              <li key={goal}>{goal}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <div className="section-row">
-          <h2>Featured Projects</h2>
-          <Link to="/projects">See all</Link>
-        </div>
-
+        <h2>Featured Projects</h2>
         <div className="grid two">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
-        </div>
-      </section>
-
-      <section>
-        <h2>Connect</h2>
-        <div className="card">
-          <ul className="contact-list">
-            {siteData.contacts.map((contact) => (
-              <li key={contact.label}>
-                <strong>{contact.label}:</strong>{' '}
-                <a href={contact.url} target="_blank" rel="noreferrer">
-                  {contact.url.replace('mailto:', '')}
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
     </div>
