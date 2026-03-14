@@ -11,40 +11,55 @@ export default function ContactPage() {
 
   return (
     <section className="contact-page">
-      <h1 className="contact-title">Contact Me</h1>
+      <h1 className="contact-title">Contact</h1>
 
       <p className="contact-description">
         Feel free to reach out for collaborations, research opportunities, or
         just to say hello.
       </p>
 
-      <div className="contact-email-box">
-        <span className="contact-email">atariq@knox.edu</span>
+      <div className="contact-list">
 
-        <button onClick={copyEmail} className="copy-email-btn">
-          {copied ? "Copied!" : "Copy Email"}
-        </button>
+        <div className="contact-item">
+          <strong>Email</strong>
+          <div className="contact-actions">
+            <span>atariq@knox.edu</span>
 
-        <a
-          href="mailto:atariq@knox.edu"
-          className="email-link"
-        >
-          Send Email
-        </a>
+            <button onClick={copyEmail} className="contact-button-small">
+              {copied ? "Copied!" : "Copy"}
+            </button>
+
+            <a href="mailto:atariq@knox.edu" className="contact-link">
+              Send Email
+            </a>
+          </div>
+        </div>
+
+        <div className="contact-item">
+          <strong>GitHub</strong>
+          <a
+            href="https://github.com/ahsan-tariq-09"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            github.com/ahsan-tariq-09
+          </a>
+        </div>
+
+        <div className="contact-item">
+          <strong>LinkedIn</strong>
+          <a
+            href="https://linkedin.com/in/ahsan-09-tariq"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            linkedin.com/in/ahsan-09-tariq
+          </a>
+        </div>
+
       </div>
-
-      <h2 className="contact-form-title">Send me a message</h2>
-
-      <form className="contact-form">
-        <input placeholder="Your Full Name" />
-        <input placeholder="Your Email" />
-        <input placeholder="Your Phone Number (optional)" />
-        <textarea placeholder="Your Message" rows={5}></textarea>
-
-        <button type="submit" className="contact-button">
-          CONTACT ME
-        </button>
-      </form>
     </section>
   );
 }
