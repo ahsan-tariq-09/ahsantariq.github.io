@@ -10,7 +10,7 @@ export default function HomePage() {
 <section className="hero">
   <h1 className="hero-name">Hi there, I’m Ahsan Tariq 👋</h1>
   <h2 className="hero-subtitle">
-    Computer Science student building software, systems, and useful tools.
+    Computer Science student building software, embedded systems, and useful tools.
   </h2>
   <p className="hero-text">{siteData.intro}</p>
 
