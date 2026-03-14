@@ -72,7 +72,7 @@ export const siteData: SiteData = {
       title: 'MIPS Assembly Simulator',
       description:
         'This project runs a subset of MIPS assembly directly from .asm files with labels and basic .data support.',
-      tech: ['React', 'TypeScript', 'Planning'],
+      tech: ['C', 'Assembly'],
     },
   ],
 
