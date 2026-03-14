@@ -11,7 +11,7 @@ export default function ThemeToggle({
 }: ThemeToggleProps) {
   return (
     <button className="theme-toggle" onClick={onToggleTheme}>
-      {theme === 'dark' ? 'Light mode' : 'Dark mode'}
+      {theme === 'dark' ? 'Dark mode' : 'Light mode'}
     </button>
   )
 }

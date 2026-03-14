@@ -7,20 +7,22 @@ export default function HomePage() {
 
   return (
     <div className="page-stack">
-      <section className="hero">
-        <p className="eyebrow">Hey there, I’m {siteData.name} 👋</p>
-        <h1>{siteData.headline}</h1>
-        <p className="hero-text">{siteData.intro}</p>
+<section className="hero">
+  <h1 className="hero-name">Hi there, I’m Ahsan Tariq 👋</h1>
+  <h2 className="hero-subtitle">
+    Computer Science student building software, systems, and useful tools.
+  </h2>
+  <p className="hero-text">{siteData.intro}</p>
 
-        <div className="hero-actions">
-          <Link to="/projects" className="button primary">
-            View Projects
-          </Link>
-          <Link to="/blog" className="button secondary">
-            Read Blog
-          </Link>
-        </div>
-      </section>
+  <div className="hero-actions">
+    <Link to="/projects" className="button primary">
+      View Projects
+    </Link>
+    <Link to="/blog" className="button secondary">
+      Read Blog
+    </Link>
+  </div>
+</section>
 
       <section>
         <h2>Featured Projects</h2>
