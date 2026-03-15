@@ -21,14 +21,8 @@ export const siteData: SiteData = {
     },
   ],
 
-  currentWork: [
-    'Java projects from coursework and beyond.',
-    'Exploring functional programming with Haskell to broaden my perspective.',
-    'Small experiments with Python for quick ideas and automation.',
-    'Building problem-solving skills through coding challenges and competitions.',
-    'Learning JavaScript and React.js for web development to work on the Knox Makerspace server.',
-    'Working on a website to help freshmen with career and course navigation at Knox College.',
-  ],
+  currentWorkParagraph:
+  'I’m currently working across coursework, personal projects, and practical web development. That includes Java projects from class and beyond, exploring functional programming with Haskell to broaden how I think about software design, and running small Python experiments for automation and rapid prototyping. I’m also sharpening my problem-solving through coding challenges, learning JavaScript and React for web development work connected to the Knox Makerspace server, and building a website to help freshmen navigate courses, careers, and academic planning at Knox College.',
 
   goals: [
     'Strengthen mastery of Java, Python, TypeScript/React, and C++, with a focus on writing cleaner, scalable code.',

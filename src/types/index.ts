@@ -37,9 +37,10 @@ export interface SiteData {
   headline: string
   intro: string
   skills: Skill[]
-  currentWork: string[]
+  currentWorkParagraph: string
   goals: string[]
   projects: Project[]
   blogPosts: BlogPostMeta[]
   contacts: SocialLink[]
+  
 }

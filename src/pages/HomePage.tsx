@@ -39,11 +39,7 @@ export default function HomePage() {
       <section>
         <h2>What I’m Working On</h2>
         <div className="card">
-          <ul className="clean-list">
-            {siteData.currentWork.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <p className="section-paragraph">{siteData.currentWorkParagraph}</p>
         </div>
       </section>
 
