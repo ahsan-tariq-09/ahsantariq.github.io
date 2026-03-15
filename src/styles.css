@@ -324,6 +324,16 @@ section h1 {
   font-weight: 600;
 }
 
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.copy-email-btn {
+  align-self: flex-start;
+}
+
 .copy-email-btn {
   border: 1px solid var(--primary);
   background: var(--primary);

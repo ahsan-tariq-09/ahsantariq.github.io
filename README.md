@@ -142,10 +142,7 @@ src
  ├── App.tsx
  ├── main.tsx
  └── styles.css
-
-public
- └── posts
-
+ 
 .github
  └── workflows
      └── deploy.yml

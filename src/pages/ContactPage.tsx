@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { siteData } from '../data/siteData'
 
 function GitHubIcon() {
   return (
@@ -44,12 +45,29 @@ function EmailIcon() {
   )
 }
 
+function getIcon(label: string) {
+  switch (label) {
+    case 'Email':
+      return <EmailIcon />
+    case 'GitHub':
+      return <GitHubIcon />
+    case 'LinkedIn':
+      return <LinkedInIcon />
+    default:
+      return null
+  }
+}
+
 export default function ContactPage() {
   const [copied, setCopied] = useState(false)
 
+  const emailContact = siteData.contacts.find((contact) => contact.label === 'Email')
+
   const copyEmail = async () => {
+    if (!emailContact) return
+
     try {
-      await navigator.clipboard.writeText('atariq@knox.edu')
+      await navigator.clipboard.writeText(emailContact.value)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
@@ -66,60 +84,36 @@ export default function ContactPage() {
       </p>
 
       <div className="contact-card-list">
-        <a
-          href="mailto:atariq@knox.edu"
-          className="contact-card"
-          aria-label="Email Ahsan Tariq"
-        >
-          <div className="contact-card-left">
-            <EmailIcon />
-            <div>
-              <p className="contact-label">Email</p>
-              <p className="contact-value">atariq@knox.edu</p>
-            </div>
-          </div>
-        </a>
+        {siteData.contacts.map((contact) => (
+  <div key={contact.label} className="contact-item">
+    <a
+      href={contact.url}
+      target={contact.label === 'Email' ? undefined : '_blank'}
+      rel={contact.label === 'Email' ? undefined : 'noreferrer'}
+      className="contact-card"
+      aria-label={contact.ariaLabel}
+    >
+      <div className="contact-card-left">
+        {getIcon(contact.label)}
+        <div>
+          <p className="contact-label">{contact.label}</p>
+          <p className="contact-value">{contact.value}</p>
+        </div>
+      </div>
+    </a>
 
-        <button
-          type="button"
-          onClick={copyEmail}
-          className="copy-email-btn"
-          aria-label="Copy email address"
-        >
-          {copied ? 'Copied!' : 'Copy email'}
-        </button>
-
-        <a
-          href="https://github.com/ahsan-tariq-09"
-          target="_blank"
-          rel="noreferrer"
-          className="contact-card"
-          aria-label="GitHub profile"
-        >
-          <div className="contact-card-left">
-            <GitHubIcon />
-            <div>
-              <p className="contact-label">GitHub</p>
-              <p className="contact-value">ahsan-tariq-09</p>
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="https://linkedin.com/in/ahsan-09-tariq/"
-          target="_blank"
-          rel="noreferrer"
-          className="contact-card"
-          aria-label="LinkedIn profile"
-        >
-          <div className="contact-card-left">
-            <LinkedInIcon />
-            <div>
-              <p className="contact-label">LinkedIn</p>
-              <p className="contact-value">Ahsan Tariq</p>
-            </div>
-          </div>
-        </a>
+    {contact.label === 'Email' && (
+      <button
+        type="button"
+        onClick={copyEmail}
+        className="copy-email-btn"
+        aria-label="Copy email address"
+      >
+        {copied ? 'Copied!' : 'Copy email'}
+      </button>
+    )}
+  </div>
+))}
       </div>
     </section>
   )

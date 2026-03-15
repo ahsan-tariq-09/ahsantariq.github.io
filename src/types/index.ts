@@ -19,17 +19,11 @@ export interface Project {
   featured?: boolean
 }
 
-export interface BlogPostMeta {
-  slug: string
-  title: string
-  date: string
-  summary: string
-  tags: string[]
-}
-
 export interface SocialLink {
-  label: string
+  label: 'Email' | 'GitHub' | 'LinkedIn'
   url: string
+  value: string
+  ariaLabel: string
 }
 
 export interface SiteData {

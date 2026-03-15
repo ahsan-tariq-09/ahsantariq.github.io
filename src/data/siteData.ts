@@ -71,8 +71,23 @@ export const siteData: SiteData = {
   ],
 
   contacts: [
-    { label: 'Email', url: 'mailto:atariq@knox.edu' },
-    { label: 'LinkedIn', url: 'https://linkedin.com/in/ahsan-09-tariq/' },
-    { label: 'GitHub', url: 'https://github.com/ahsan-tariq-09' },
+    {
+      label: 'Email',
+      url: 'mailto:atariq@knox.edu',
+      value: 'atariq@knox.edu',
+      ariaLabel: 'Email Ahsan Tariq',
+    },
+    {
+      label: 'GitHub',
+      url: 'https://github.com/ahsan-tariq-09',
+      value: 'ahsan-tariq-09',
+      ariaLabel: 'GitHub profile',
+    },
+    {
+      label: 'LinkedIn',
+      url: 'https://linkedin.com/in/ahsan-09-tariq/',
+      value: 'Ahsan Tariq',
+      ariaLabel: 'LinkedIn profile',
+    },
   ],
 }
