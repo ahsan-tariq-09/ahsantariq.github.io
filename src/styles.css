@@ -58,6 +58,16 @@ a:hover {
   flex-direction: column;
 }
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tag-list {
+  row-gap: 0.5rem;
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -342,10 +352,6 @@ section h1 {
 
 .interactive-card {
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-}
-
-.clickable-card {
-  cursor: pointer;
 }
 
 .interactive-card:hover {

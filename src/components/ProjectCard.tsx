@@ -1,4 +1,3 @@
-import type { MouseEvent } from 'react'
 import type { Project } from '../types'
 
 interface ProjectCardProps {
@@ -37,44 +36,8 @@ function ProjectPreviewIcon() {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const openPrimaryLink = () => {
-    const url = project.githubUrl ?? project.liveUrl
-    if (url) {
-      window.open(url, '_blank', 'noopener,noreferrer')
-    }
-  }
-
-  const handleCardClick = (event: MouseEvent<HTMLElement>) => {
-    const target = event.target as HTMLElement
-    if (target.closest('a, button')) return
-    openPrimaryLink()
-  }
-
-  const handleCardKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
-    const target = event.target as HTMLElement
-    if (target.closest('a, button')) return
-
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault()
-      openPrimaryLink()
-    }
-  }
-
   return (
-    <article
-      className={`card project-card interactive-card ${
-        project.githubUrl || project.liveUrl ? 'clickable-card' : ''
-      }`}
-      onClick={handleCardClick}
-      onKeyDown={handleCardKeyDown}
-      tabIndex={project.githubUrl || project.liveUrl ? 0 : -1}
-      role={project.githubUrl || project.liveUrl ? 'link' : undefined}
-      aria-label={
-        project.githubUrl || project.liveUrl
-          ? `Open project ${project.title}`
-          : undefined
-      }
-    >
+    <article className="card project-card interactive-card">
       <div className="project-header">
         <div className="project-title-wrap">
           <ProjectPreviewIcon />
