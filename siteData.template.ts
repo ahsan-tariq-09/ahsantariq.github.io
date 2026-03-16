@@ -1,4 +1,4 @@
-// This is just a template file for siteData.ts . Please copy this to siteData.ts and fill in the relevant information.
+// This is just a template file for siteData.ts . Please copy this to siteData.ts in src/data/ and fill in the relevant information.
 
 import type { SiteData } from '../types'
 
